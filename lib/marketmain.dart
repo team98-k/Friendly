@@ -1,31 +1,32 @@
 import 'package:flutter/material.dart';
 
+
 void main(){
-  runApp(const Register());
+  runApp(const Market());
 }
 
-class Register extends StatelessWidget{
-  const Register({Key? key}) : super(key: key);
+class Market extends StatelessWidget{
+  const Market({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title:'MaterialApp',
       theme: ThemeData(
-      brightness:Brightness.light,
-      primaryColor: Colors.black,
+        brightness:Brightness.light,
+        primaryColor: Colors.black,
       ),
 
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
-            title: Text('환영합니다. 프랜들리입니다.'),
-            centerTitle: true,
+          title: Text('중고마켓'),
+          centerTitle: true,
         ),
         body: Padding(
           padding: const EdgeInsets.all(90),
           child: Column(
-            children: [
+            children: <Widget> [
               TextField(
                 decoration: InputDecoration(
                     border: UnderlineInputBorder(),
@@ -39,26 +40,23 @@ class Register extends StatelessWidget{
                     hintText: "비밀번호"
                 ),
               ),
-              TextField(
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "이름"
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "이메일"
-                ),
-              ),
-              ElevatedButton(
-                child: Text('회원가입'),
-                onPressed: () {
-                  Navigator.pop(context);},
+              Row(
+                children:<Widget>[
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text('로그인'),
                   ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text('회원가입'),
+                  ),
+                ],
+              ),
             ],
           ),
+
         ),
+
       ),
 
     );
