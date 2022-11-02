@@ -1,66 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/screen/more_screen.dart';
+import 'screen/home_screen.dart';
+import 'widget/bottom_bar.dart';
 
-void main(){
-  runApp(const Register());
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget {
+  _MyAppState createState() => _MyAppState();
 }
 
-class Register extends StatelessWidget{
-  const Register({Key? key}) : super(key: key);
+class _MyAppState extends State<MyApp> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title:'MaterialApp',
+      title: "Friendly",
       theme: ThemeData(
-      brightness:Brightness.light,
-      primaryColor: Colors.black,
-      ),
-
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-            title: Text('환영합니다. 프랜들리입니다.'),
-            centerTitle: true,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(90),
-          child: Column(
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "아이디"
+          brightness: Brightness.light,
+          primaryColor: Colors.black,
+          colorScheme:
+          ColorScheme.fromSwatch().copyWith(secondary: Colors.white)),
+      home: DefaultTabController(
+        length: 5,
+        child: Scaffold(
+          body: TabBarView(
+            physics: NeverScrollableScrollPhysics(),
+            children: <Widget>[
+              HomeScreen(),
+              Container(
+                child: Center(
+                  child: Text("list"),
                 ),
               ),
-
-              TextField(
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "비밀번호"
+              Container(
+                child: Center(
+                  child: Text("shop"),
                 ),
               ),
-              TextField(
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "이름"
+              Container(
+                child: Center(
+                  child: Text("profile"),
                 ),
               ),
-              TextField(
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "이메일"
-                ),
-              ),
-              ElevatedButton(
-                child: Text('회원가입'),
-                onPressed: () {
-                  Navigator.pop(context);},
-                  ),
+              MoreScreen(),
             ],
           ),
+          bottomNavigationBar: Bottom(),
         ),
       ),
-
     );
   }
 }
