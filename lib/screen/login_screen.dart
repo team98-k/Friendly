@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'register_screen.dart';
 
 
-void main(){
-  runApp(const Login());
-}
-
-class Login extends StatelessWidget{
-  const Login({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -57,7 +52,7 @@ class Login extends StatelessWidget{
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Register()),
+                        MaterialPageRoute(builder: (context) => RegisterScreen()),
                       );
                     },
                   ),
