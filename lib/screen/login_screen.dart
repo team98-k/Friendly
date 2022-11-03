@@ -20,7 +20,7 @@ class LoginScreen extends StatelessWidget{
           centerTitle: true,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(100),
+          padding: const EdgeInsets.all(90),
           child: Column(
             children: <Widget> [
               TextField(

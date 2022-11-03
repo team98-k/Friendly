@@ -22,7 +22,7 @@ class RegisterScreen extends StatelessWidget{
             centerTitle: true,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(90),
+          padding: const EdgeInsets.all(100),
           child: Column(
             children: [
               TextField(
