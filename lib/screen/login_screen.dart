@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'register_screen.dart';
 
 
 class LoginScreen extends StatelessWidget{
@@ -68,3 +67,4 @@ class LoginScreen extends StatelessWidget{
     );
   }
 }
+
