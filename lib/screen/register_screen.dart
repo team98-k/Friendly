@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'firebase_options.dart';
 
-class Register extends StatelessWidget{
+class RegisterScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(

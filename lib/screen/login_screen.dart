@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/screen/register_screen.dart';
 
-
-class LoginScreen extends StatelessWidget{
+class LoginScreen extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title:'MaterialApp',
+      title: 'MaterialApp',
       theme: ThemeData(
-        brightness:Brightness.light,
+        brightness: Brightness.light,
         primaryColor: Colors.black,
       ),
-
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
@@ -21,27 +20,25 @@ class LoginScreen extends StatelessWidget{
         body: Padding(
           padding: const EdgeInsets.all(90),
           child: Column(
-            children: <Widget> [
+            children: <Widget>[
               TextField(
                 decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "아이디"
-                ),
+                    border: UnderlineInputBorder(), hintText: "아이디"),
               ),
-
               TextField(
                 decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "비밀번호",
-                    suffixIcon: IconButton(icon:Icon(Icons.visibility_off),
-                    onPressed:() {},
-                    ),
+                  border: UnderlineInputBorder(),
+                  hintText: "비밀번호",
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.visibility_off),
+                    onPressed: () {},
+                  ),
                 ),
-               textInputAction: TextInputAction.next,
-               obscureText: true,
+                textInputAction: TextInputAction.next,
+                obscureText: true,
               ),
               Row(
-                children:<Widget>[
+                children: <Widget>[
                   ElevatedButton(
                     child: Text('로그인'),
                     onPressed: () {},
@@ -59,12 +56,8 @@ class LoginScreen extends StatelessWidget{
               ),
             ],
           ),
-
         ),
-
       ),
-
     );
   }
 }
-
