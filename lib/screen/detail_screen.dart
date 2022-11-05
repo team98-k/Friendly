@@ -33,7 +33,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     width: double.maxFinite,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/' + widget.movie.poster),
+                        image: NetworkImage(widget.movie.poster),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -45,8 +45,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             children: <Widget>[
                               Container(
                                 padding: EdgeInsets.fromLTRB(0, 45, 0, 10),
-                                child: Image.asset(
-                                    'images/' + widget.movie.poster),
+                                child: Image.network(widget.movie.poster),
                                 height: 300,
                               ),
                               Container(
@@ -55,6 +54,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                   '99% 일치 2019 15+ 시즌 1개',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16),
                                 ),
@@ -67,20 +67,23 @@ class _DetailScreenState extends State<DetailScreen> {
                                   onPressed: () {},
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Icon(Icons.play_arrow),
-                                      Text('재생'),
+                                    children: const <Widget>[
+                                      Icon(Icons.play_arrow, ),
+                                      Text('재생', style: TextStyle(color: Colors.black),),
                                     ],
                                   ),
                                 ),
                               ),
                               Container(
-                                padding: EdgeInsets.all(5),
-                                child: Text(widget.movie.toString()),
+                                padding: const EdgeInsets.all(5),
+                                child: Text(
+                                  widget.movie.toString(),
+                                  style: TextStyle(color: Colors.white60),
+                                ),
                               ),
                               Container(
                                 padding: EdgeInsets.all(5),
-                                child: Text(
+                                child: const Text(
                                   '출연: 현빈, 손예진...',
                                   style: TextStyle(
                                       color: Colors.white60, fontSize: 12),
@@ -108,10 +111,15 @@ class _DetailScreenState extends State<DetailScreen> {
                     Container(
                       padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          setState(() {
+                            like = !like;
+                            widget.movie.reference.update({'like': like});
+                          });
+                        },
                         child: Column(
                           children: <Widget>[
-                            like ? Icon(Icons.check) : Icon(Icons.add),
+                            like ? const Icon(Icons.check) : Icon(Icons.add),
                             Padding(padding: EdgeInsets.all(5)),
                             Text(
                               '내가 찜한 콘텐츠',

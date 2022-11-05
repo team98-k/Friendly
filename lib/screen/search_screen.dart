@@ -1,7 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:testapp/screen/detail_screen.dart';
+import '../model/model_movie.dart';
 
 class SearchScreen extends StatefulWidget {
-  _SearchScreenState createState() = _SearchScreenState();
+  _SearchScreenState createState() => _SearchScreenState();
 }
 
 class _SearchScreenState extends State<SearchScreen> {
@@ -15,6 +18,49 @@ class _SearchScreenState extends State<SearchScreen> {
         _searchText = _filter.text;
       });
     });
+  }
+
+  Widget _buildBody(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      stream: FirebaseFirestore.instance.collection('movie').snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) return LinearProgressIndicator();
+        return _buildList(context, snapshot.data!.docs);
+      },
+    );
+  }
+
+  Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
+    List<DocumentSnapshot> searchResults = [];
+    for (DocumentSnapshot d in snapshot) {
+      if (d.data().toString().contains(_searchText)) {
+        searchResults.add(d);
+      }
+    }
+    return Expanded(
+      child: GridView.count(
+        crossAxisCount: 3,
+        childAspectRatio: 1 / 1.5,
+        padding: EdgeInsets.all(3),
+        children: searchResults
+            .map((data) => _buildListItem(context, data)).toList(),
+      ),
+    );
+  }
+
+  Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
+    final movie = Movie.fromSnapshat(data);
+    return InkWell(
+      child: Image.network(movie.poster),
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute<Null>(
+            fullscreenDialog: true,
+            builder: (BuildContext context){
+            return DetailScreen(movie: movie);
+          }
+        ));
+      },
+    );
   }
 
   @override
@@ -56,17 +102,34 @@ class _SearchScreenState extends State<SearchScreen> {
                     hintText: '검색',
                     labelStyle: TextStyle(color: Colors.white),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white)
-                    )
+                        borderSide: BorderSide(color: Colors.transparent),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.transparent),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.transparent),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                 ),
+                ),
+                focusNode.hasFocus ? Expanded(
+                  child: TextButton(child: Text('취소'), onPressed: () {
+                    setState(() {
+                      _filter.clear();
+                      _searchText = "";
+                      focusNode.unfocus();
+                    });
+                  },
+                  ),
                 )
+                    : Expanded(flex: 0, child: Container(),)
               ],
             ),
-          )
+          ),
+          _buildBody(context)
         ],
-      )
-      ,
+      ),
     );
   }
 }
