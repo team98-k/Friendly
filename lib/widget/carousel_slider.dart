@@ -4,9 +4,9 @@ import 'package:testapp/screen/detail_screen.dart';
 import '../model/model_movie.dart';
 
 class CarouselImage extends StatefulWidget {
-  final List<Movie>? movies;
+  final List<Movie> movies;
 
-  CarouselImage({Key? key, required this.movies}) : super(key: key);
+  CarouselImage({required this.movies});
 
   _CarouselImageState createState() => _CarouselImageState();
 }
@@ -46,7 +46,7 @@ class _CarouselImageState extends State<CarouselImage> {
                 });
               })),
           Container(
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 3),
+            padding: EdgeInsets.fromLTRB(0 , 10, 0, 3),
             child: Text(
               _currentKeyword,
               style: TextStyle(fontSize: 11),
@@ -60,11 +60,12 @@ class _CarouselImageState extends State<CarouselImage> {
                   child: Column(
                     children: <Widget>[
                       likes![_currentPage]
-                      ? IconButton(
+                          ? IconButton(
                               onPressed: () {
                                 setState(() {
                                   likes![_currentPage] = !likes![_currentPage];
-                                  movies?[_currentPage]?.reference
+                                  movies?[_currentPage]
+                                      ?.reference
                                       .update({'like': likes![_currentPage]});
                                 });
                               },
@@ -74,7 +75,8 @@ class _CarouselImageState extends State<CarouselImage> {
                               onPressed: () {
                                 setState(() {
                                   likes![_currentPage] = !likes![_currentPage];
-                                  movies![_currentPage]?.reference
+                                  movies![_currentPage]
+                                      ?.reference
                                       .update({'like': likes![_currentPage]});
                                 });
                               },
@@ -150,8 +152,8 @@ List<Widget> makeIndicator(List list, int _currentPage) {
   List<Widget> results = [];
   for (var i = 0; i < list.length; i++) {
     results.add(Container(
-      width: 0,
-      height: 0,
+      width: 8,
+      height: 8,
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
       decoration: BoxDecoration(
           shape: BoxShape.circle,

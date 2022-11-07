@@ -1,45 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40394c5e-c284-4079-af18-7b8355e2faf4" name="Changes" comment="">
+    <list default="true" id="9c65eb18-7d57-4750-8a7c-6263c5e85aa6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/kotlinScripting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/kotlin/friendly/app/App.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/kotlin/friendly/app/MessageUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/test/kotlin/friendly/app/MessageUtilsTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../buildSrc/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../buildSrc/src/main/kotlin/friendly.kotlin-application-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../buildSrc/src/main/kotlin/friendly.kotlin-common-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../buildSrc/src/main/kotlin/friendly.kotlin-library-conventions.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../list/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../list/src/main/kotlin/friendly/list/LinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../list/src/test/kotlin/friendly/list/LinkedListTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../utilities/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../utilities/src/main/kotlin/friendly/utilities/JoinUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../utilities/src/main/kotlin/friendly/utilities/SplitUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../utilities/src/main/kotlin/friendly/utilities/StringUtils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/kernel_snapshot.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/10732dc13d15ddb95261ada28e2f2e4f/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/kernel_snapshot.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/3e0c956c7ff3d20c47a95a4762978937/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/debug_android_application.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/kernel_snapshot.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/5b88cc43b90eadaf7479b68168e4cad0/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/../.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/profile/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database.rules.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firebase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/Runner/GoogleService-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ios/firebase_app_id_file.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/firebase_options.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lib/screen/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/screen/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/screen/register_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/screen/search_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/screen/search_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/screen/like_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/screen/like_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/screen/more_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/screen/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/widget/bottom_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/widget/bottom_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/widget/box_slider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/widget/box_slider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/widget/carousel_slider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/widget/carousel_slider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/widget/circle_slider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/widget/circle_slider.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/gimjeonghun/.android/avd/Pixel_3a_API_33_arm64-v8a.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/gimjeonghun/.android/avd/New_Device_API_33.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -48,7 +82,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2H2Cqgp2DSDJ1wQrHr1EqX7oegn" />
+  <component name="ProjectId" id="2HDBw9jfSXlenMD42rTnitKaX25" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -129,11 +163,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="40394c5e-c284-4079-af18-7b8355e2faf4" name="Changes" comment="" />
-      <created>1667473983893</created>
+      <changelist id="9c65eb18-7d57-4750-8a7c-6263c5e85aa6" name="Changes" comment="" />
+      <created>1667810010422</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1667473983893</updated>
+      <updated>1667810010422</updated>
     </task>
     <servers />
   </component>

@@ -38,7 +38,7 @@ List<Widget> makeCircleImage(BuildContext context, List<Movie> movies) {
             Navigator.of(context).push(MaterialPageRoute<Null>(
                 fullscreenDialog: true,
                 builder: (BuildContext context) {
-                  return DetailScreen(movie: movies![i],);
+                  return DetailScreen(movie: movies[i],);
                 }));
           },
           child: Container(

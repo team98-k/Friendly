@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:testapp/widget/box_slider.dart';
 import 'package:testapp/widget/carousel_slider.dart';
 import 'package:testapp/widget/circle_slider.dart';
-
 import '../model/model_movie.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,14 +16,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    firestore.collection('movie').snapshots();
+    streamData = firestore.collection('movie').snapshots();
   }
 
   Widget _fetchData(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
       stream: firestore.collection('movie').snapshots(),
       builder: (context, snapshot) {
-        if (!snapshot.hasData) return const LinearProgressIndicator();
+        if (!snapshot.hasData) return LinearProgressIndicator();
         return _buildBody(context, snapshot.data!.docs);
       },
     );
@@ -35,7 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListView(
       children: [
         Stack(
-          children: [CarouselImage(movies: movies), TopBar()],
+          children: <Widget>[
+            CarouselImage(movies: movies)
+            , TopBar()
+          ],
         ),
         CircleSlider(movies: movies),
         BoxSlider(movies: movies),

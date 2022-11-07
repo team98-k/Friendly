@@ -10,6 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-4.0.4/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-2.1.1/android" />
             <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_android-6.0.21/android" />
           </set>
         </option>

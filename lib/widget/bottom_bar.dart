@@ -18,16 +18,10 @@ class Bottom extends StatelessWidget {
               child: Text("home", style: TextStyle(fontSize: 9)),
             ),
             Tab(icon: Icon(
-              Icons.list,
+              Icons.search,
               size: 18,
             ),
               child: Text("list", style: TextStyle(fontSize: 9)),
-            ),
-            Tab(icon: Icon(
-              Icons.shopping_cart,
-              size: 18,
-            ),
-              child: Text("shop", style: TextStyle(fontSize: 9)),
             ),
             Tab(icon: Icon(
               Icons.location_on,
