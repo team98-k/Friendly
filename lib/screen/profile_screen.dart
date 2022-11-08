@@ -14,7 +14,7 @@ class ProfileScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 50),
               child: CircleAvatar(
                 radius: 100,
-                backgroundImage: AssetImage('images/kbo.png'),
+                backgroundImage: AssetImage('images/friendly_logo.png'),
               ),
             ),
             Container(

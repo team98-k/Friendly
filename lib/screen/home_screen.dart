@@ -34,13 +34,22 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListView(
       children: [
         Stack(
-          children: <Widget>[
-            CarouselImage(movies: movies)
-            , TopBar()
+          children: <Widget>[CarouselImage(movies: movies), TopBar(),
           ],
         ),
         CircleSlider(movies: movies),
         BoxSlider(movies: movies),
+        Container(
+          margin: EdgeInsets.all(15),
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(1000),
+            color: Colors.blue,
+          ),
+          child: Icon(Icons.add),
+        ),
+
       ],
     );
   }
@@ -60,7 +69,7 @@ class TopBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image.asset(
-            'images/kbo.png',
+            'images/friendly_logo.png',
             fit: BoxFit.contain,
             height: 25,
           ),
