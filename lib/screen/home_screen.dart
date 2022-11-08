@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:testapp/widget/box_slider.dart';
 import 'package:testapp/widget/carousel_slider.dart';
 import 'package:testapp/widget/circle_slider.dart';
+import 'package:testapp/widget/plus_button.dart';
 import '../model/model_movie.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -38,18 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         CircleSlider(movies: movies),
-        BoxSlider(movies: movies),
-        Container(
-          margin: EdgeInsets.all(15),
-          width: 50,
-          height: 50,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(1000),
-            color: Colors.blue,
-          ),
-          child: Icon(Icons.add),
-        ),
-
+        Stack(
+          children: [BoxSlider(movies: movies), PlusButton()],
+        )
       ],
     );
   }

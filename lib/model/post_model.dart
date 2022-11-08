@@ -9,7 +9,7 @@ class Post {
   int firstPicWidth;
   int firstPicHeight;
   String authorName;
-  int like;
+  bool like;
 
   Post(
       {required this.key,
