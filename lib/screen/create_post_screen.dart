@@ -26,6 +26,8 @@ class _CreatePostScreenState extends State<CreatePostScreen>{
     return Scaffold(
       body: Column(
         children: [
+          Container(),
+          AppBar(),
           TextField(
             controller: titleController,
             decoration: InputDecoration(

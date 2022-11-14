@@ -17,7 +17,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late TabController controller;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,7 +38,7 @@ class _MyAppState extends State<MyApp> {
               ProfileScreen(),
             ],
           ),
-          bottomNavigationBar: Bottom(),
+          bottomNavigationBar: BottomBar(),
         ),
       ),
     );

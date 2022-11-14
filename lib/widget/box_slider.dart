@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/screen/login_screen.dart';
 import '../model/model_movie.dart';
 import '../screen/detail_screen.dart';
 
@@ -34,7 +35,7 @@ List<Widget> makeBoxImages(BuildContext context, List<Movie> movies) {
         Navigator.of(context).push(MaterialPageRoute<Null>(
             fullscreenDialog: true,
             builder: (BuildContext context) {
-              return DetailScreen(movie: movies[i],);
+              return LoginScreen();
             }));
       },
       child: Container(

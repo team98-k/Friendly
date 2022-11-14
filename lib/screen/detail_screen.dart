@@ -68,8 +68,13 @@ class _DetailScreenState extends State<DetailScreen> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: const <Widget>[
-                                      Icon(Icons.play_arrow, ),
-                                      Text('재생', style: TextStyle(color: Colors.black),),
+                                      Icon(
+                                        Icons.play_arrow,
+                                      ),
+                                      Text(
+                                        '재생',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -111,15 +116,27 @@ class _DetailScreenState extends State<DetailScreen> {
                     Container(
                       padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            like = !like;
-                            widget.movie.reference.update({'like': like});
-                          });
-                        },
                         child: Column(
                           children: <Widget>[
-                            like ? const Icon(Icons.check) : Icon(Icons.add),
+                            widget.movie.like
+                                ? IconButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        like = !like;
+                                        widget.movie.reference
+                                            .update({'like': like});
+                                      });
+                                    },
+                                    icon: Icon(Icons.check))
+                                : IconButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        like = !like;
+                                        widget.movie.reference
+                                            .update({'like': like});
+                                      });
+                                    },
+                                    icon: Icon(Icons.add)),
                             Padding(padding: EdgeInsets.all(5)),
                             Text(
                               '내가 찜한 콘텐츠',
