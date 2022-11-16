@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:testapp/main.dart';
+import 'package:testapp/screen/chat_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -102,9 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 onPressed: () {
                   firebaseAuth.signOut();
-                  Navigator.pop(context, MaterialPageRoute(builder: (context) {
-                    return MyApp();
-                  }));
+                  Navigator.pop(context);
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -118,6 +117,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     Text(
                       '로그아웃',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: TextButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute<Null>(
+                      fullscreenDialog: true,
+                      builder: (BuildContext context) {
+                        return ChatScreen();
+                      }));
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(
+                      Icons.chat,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '채팅',
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
