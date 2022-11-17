@@ -24,10 +24,10 @@ class BottomBar extends StatelessWidget {
               child: Text("list", style: TextStyle(fontSize: 9)),
             ),
             Tab(icon: Icon(
-              Icons.location_on,
+              Icons.check,
               size: 18,
             ),
-              child: Text("map", style: TextStyle(fontSize: 9)),
+              child: Text("like", style: TextStyle(fontSize: 9)),
             ),
             Tab(icon: Icon(
               Icons.pets_rounded,

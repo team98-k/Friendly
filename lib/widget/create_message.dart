@@ -3,6 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class CreateMessage extends StatefulWidget {
+  const CreateMessage({Key? key}) : super(key: key);
+
   _CreateMessageState createState() => _CreateMessageState();
 }
 

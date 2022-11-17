@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/widget/image_picker.dart';
 import '../screen/create_post_screen.dart';
 
 class PlusButton extends StatelessWidget{
@@ -9,7 +10,7 @@ class PlusButton extends StatelessWidget{
         Navigator.of(context).push(MaterialPageRoute<Null>(
             fullscreenDialog: true,
             builder: (BuildContext context) {
-              return CreatePostScreen();
+              return ImagePick();
             }));
       },
       child: Container(
